@@ -6,8 +6,8 @@ export const getUserThumbnails = async (req:Request, res:Response)=>{
     try{
       
         const {userId} = req.session;
-        const thumbnail = await Thumbnail.find({userId}).sort({createAt: -1});
-        res.json({thumbnail});
+        const thumbnails = await Thumbnail.find({userId}).sort({createAt: -1});
+        res.json({thumbnails});
 
 
     }catch(error:any){

@@ -10,6 +10,8 @@ import Generate from "./pages/Generate";
 import Login from "./components/Login"
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+
 export default function App() {
 
     const {pathname} = useLocation()
@@ -20,6 +22,7 @@ export default function App() {
 
     return (
         <>
+            <Toaster />
             <LenisScroll />
             <Navbar />
             <Routes>
